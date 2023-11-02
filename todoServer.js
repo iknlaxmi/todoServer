@@ -36,10 +36,10 @@ app.put("/todos/:id", (req, res) => {
 
   const new_task = req.body.task;
 
-  const mod_task = todoList.find((item) => item.id === modified_id);
+  const update_task = todoList.find((item) => item.id === modified_id);
 
-  if (mod_task) {
-    mod_task.task = new_task;
+  if (update_task) {
+    update_task.task = new_task;
     console.log(todoList);
   }
   res.send("ok");
